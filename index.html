@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Card List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center mt-4">My Shopping List</h1>
+    <form class="container-sm input-group mb-3 mt-4" id="add-Item">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Add to your Shopping List"
+        id="input-shopping-list"
+      />
+      <button class="btn btn-outline-secondary" type="submit">Add Item</button>
+    </form>
+
+    <div class="d-grid gap-2 col-9 mx-auto">
+      <div class="list-group-item" id="shopping-list-container">
+        <label for="" class="list-group-item bg-primary text-white">
+          Shopping Items..
+        </label>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
