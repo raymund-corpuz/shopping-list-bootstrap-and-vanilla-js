@@ -14,17 +14,29 @@ addItem.addEventListener("submit", function (e) {
   const shoppingItem = inputShoppingList.value;
 
   shoppingListContainer.innerHTML += `<label for="" class="list-group-item d-flex align-items-center">
-          <input type="checkbox" class="form-check-input me-1" value="" />
-          ${shoppingItem}
+          <input type="checkbox" class=" item-checked  form-check-input me-1" value="" />
+          ${shoppingItem} 
         <button type="button" class=" delete-btn btn btn-outline-danger ms-auto id="delete">DELETE</button>
         </label>`;
   //Clear the input field
   inputShoppingList.value = "";
 });
 
+//DELETE FUNCTION
 shoppingListContainer.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-btn")) {
     e.target.parentElement.remove();
+  }
+});
+
+shoppingListContainer.addEventListener("change", function (e) {
+  if (e.target.type === "checkbox") {
+    console.log("Checkbox is change");
+    if (e.target.checked) {
+      console.log("Checkbox is check");
+    } else {
+      console.log("Checkbox is uncheck");
+    }
   }
 });
 
@@ -83,3 +95,28 @@ shoppingListContainer.addEventListener("click", function (e) {
 </body>
 </html>
 */
+
+//CHECKED FUNCTION
+// shoppingListContainer.addEventListener("change", function (e) {
+//   if (e.target.classList.contains("item-checked")) {
+//     console.log("click");
+//     if (e.target.type === "checkbox") {
+//       console.log("Start");
+//     } else {
+//       console.log("end");
+//     }
+//   }
+// });
+
+// shoppingListContainer.addEventListener("change", function (e) {
+//   console.log(e);
+//   // if (e.target.type === "checkbox") {
+//   //   console.log("Checkbox was changed!");
+
+//   //   if (e.target.checked) {
+//   //     console.log("Checkbox is checked");
+//   //   } else {
+//   //     console.log("Checkbox is unchecked");
+//   //   }
+//   // }
+// });
